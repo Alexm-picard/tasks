@@ -142,20 +142,5 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return questions.map((question) =>
-        question.id === targetId ?
-            {
-                ...question,
-                options:
-                    targetOptionIndex === -1 ?
-                        [...question.options, newOption] // Add new option to the end
-                    :   question.options.map(
-                            (option, index) =>
-                                index === targetOptionIndex ? newOption : (
-                                    option
-                                ), // Replace the existing option
-                        ),
-            }
-        :   question,
-    );
+    return [];
 }
