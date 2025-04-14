@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
-import { Button } from "react-bootstrap";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { TwoDice } from "./components/TwoDice";
+import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): React.JSX.Element {
     return (
@@ -8,36 +14,24 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 UM COS420 with React Hooks and TypeScript
             </header>
-            <div style={{ backgroundColor: "red" }}>
-                <h1 style={{ backgroundColor: "rgb(255,0,0)" }}>
-                    Heading is added.
-                </h1>
-                ;
-                <img src="/logo192.png" alt="React logo" />;
-                <ul>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>Java</li>
-                </ul>
-                ;
-                <div>
-                    <Button
-                        variant="primary"
-                        onClick={() => {
-                            console.log("Hello World!");
-                        }}
-                    >
-                        Log Hello World
-                    </Button>
-                </div>
-                ;
-            </div>
-            );
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-            <p>Alex Picard</p>
+            <hr></hr>
+            {/* <DoubleHalf></DoubleHalf> */}
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
+            <hr />
+            <StartAttempt></StartAttempt>
         </div>
     );
 }
